@@ -5,14 +5,14 @@ import "fmt"
 
 func main() {
 
-	 fueValue := 10.0   // Расстояние в километрах
-	 consumtion := 20.0 // Расход бензина за км
+	 fueValue := 20.0
+	 consumtion := 10.0
 
-	calc  := calculationDistance(fueValue, consumtion)
-	fmt.Println(calc)
+	calculationDistanceService  := calculationDistanceService(fueValue, consumtion)
+	fmt.Println(calculationDistanceService)
 }
 
-func calculationDistance(consumtion, fueValue float64 ) float64{
+func calculationDistanceService(consumtion, fueValue float64 ) float64{
 
 	calculate := (fueValue * 100 )/ consumtion
 	return calculate

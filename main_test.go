@@ -1,22 +1,20 @@
-package main
+	package main
 
-import "testing"
+	func main() {
 
-func Test_calculationDistanceService(t *testing.T) {
-	 
-	tests := []struct {
-
-		fueValue float64
-		consumtion float64
-		want float64
-	}{
-		{20.0, 10.0, 50},
 	}
 
-	for _, test := range tests{
-		got := calculationDistanceService(test.fueValue, test.consumtion)
-		if test.want != got {
-			t.Error("want: ", test.want, "but got: ", got)
-		}
+
+	func distanceCalculation(consumption, fuel int) int {
+
+
+	 const km = 100
+
+	 distance := km * fuel / consumption
+
+	 distance -= inaccuracy * distance / km
+
+	 return distance
+	 const inaccuracy = 10
+
 	}
-}

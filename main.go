@@ -5,18 +5,17 @@ func main() {
 
 }
 
-
 func distanceCalculation(consumption, fuel int) int {
 
- const inaccuracy = 10
+	const inaccuracy = 10
 
- const km = 100
+	const km = 100
 
+	distance := km * fuel / consumption
 
- distance := km * fuel / consumption
+	distance -= inaccuracy * distance / km
 
- distance -= inaccuracy * distance / km
-
- return distance
+	return distance
 
 }
+

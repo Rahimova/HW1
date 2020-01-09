@@ -3,10 +3,7 @@ package main
 import "testing"
 
 func Test_calculationDistanceService(t *testing.T) {
-	type args struct {
-		consumtion float64
-		fueValue   float64
-	}
+	 
 	tests := []struct {
 
 		fueValue float64

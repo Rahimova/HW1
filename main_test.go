@@ -2,24 +2,30 @@ package main
 
 import "testing"
 
-func Test_calculationDistanceService(t *testing.T) {
-	type args struct {
-		consumtion float64
-		fueValue   float64
-	}
+func Test_distanceCalculation(t *testing.T) {
 	tests := []struct {
+		name string
 
-		fueValue float64
-		consumtion float64
-		want float64
+		consumption int
+
+		fuel int
+
+		want int
 	}{
-		{20.0, 10.0, 50},
+
+		{"The distance it travels for the available fuel", 100, 10, 9},
 	}
 
-	for _, test := range tests{
-		got := calculationDistanceService(test.fueValue, test.consumtion)
-		if test.want != got {
-			t.Error("want: ", test.want, "but got: ", got)
+	for _, test := range tests {
+
+		got := distanceCalculation(test.consumption, test.fuel)
+
+		if got != test.want {
+
+			t.Error("For fuel", test.fuel, "got", got, "want", test.want)
+
 		}
+
 	}
+
 }

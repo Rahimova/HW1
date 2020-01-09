@@ -1,19 +1,19 @@
-
 package main
-
-import "fmt"
 
 func main() {
 
-	 fueValue := 20.0
-	 consumtion := 10.0
-
-	calculationDistanceService  := calculationDistanceService(fueValue, consumtion)
-	fmt.Println(calculationDistanceService)
 }
 
-func calculationDistanceService(consumtion, fueValue float64 ) float64{
+func distanceCalculation(consumption, fuel int) int {
 
-	calculate := (fueValue * 100 )/ consumtion
-	return calculate
+	const inaccuracy = 10
+
+	const km = 100
+
+	distance := km * fuel / consumption
+
+	distance -= inaccuracy * distance / km
+
+	return distance
+
 }

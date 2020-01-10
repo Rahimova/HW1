@@ -12,8 +12,7 @@ func distanceCalculation(consumption, fuel int) int {
 
 	distance := km * fuel / consumption
 
-	distance -= inaccuracy * distance / km
+	distanceReserve := inaccuracy * distance / km
 
-	return distance
-
+	return distance - distanceReserve
 }

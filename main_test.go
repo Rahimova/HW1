@@ -23,7 +23,6 @@ func Test_distanceCalculation(t *testing.T) {
 		if got != test.want {
 
 			t.Error("For fuel", test.fuel, "got", got, "want", test.want)
-
 		}
 
 	}
